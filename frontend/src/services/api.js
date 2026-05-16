@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const backend = import.meta.env.VITE_BACKEND;
+
 const api = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: `${backend}`,
 });
 
 export default api;
