@@ -22,13 +22,13 @@ export const Home = () => {
       age: inputAge.current.value,
     });
 
-    getUsers();
+    await getUsers();
   }
 
   async function deleteUsers(id) {
     await api.delete(`/users/${id}`);
 
-    getUsers();
+    await getUsers();
   }
 
   useEffect(() => {
